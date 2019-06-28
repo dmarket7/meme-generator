@@ -100,6 +100,7 @@ form button {
     padding: 2px;
     border-radius: 5px;
     justify-self: center;
+    background-color: #fff;
 }
 
 .image-layout {
@@ -180,7 +181,6 @@ form button {
     margin: auto;
     margin-top: 5px;
     padding: 4px;
-    /* background-color: #F2545B; */
     border-radius: 5px;
     background-color: #A93F55;
     color: #fff;
@@ -207,6 +207,10 @@ form button {
 
     .main-image-layout, .top-caption-layout, .bottom-caption-layout {
         width: 320px;
+    }
+
+    #image-url {
+        width: 175px;
     }
 
     #top-caption-input, #bottom-caption-input {
