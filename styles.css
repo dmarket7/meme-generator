@@ -100,7 +100,6 @@ form button {
     padding: 2px;
     border-radius: 5px;
     justify-self: center;
-    background-color: #fff;
 }
 
 .image-layout {
@@ -174,6 +173,7 @@ form button {
 #display-text {
     justify-self: center;
     margin: auto;
+    background-color: #fff;
 }
 
 .delete-button {
@@ -210,14 +210,14 @@ form button {
     }
 
     #image-url {
-        width: 175px;
+        width: 125px;
     }
 
     #top-caption-input, #bottom-caption-input {
-        max-width: 320px;
+        max-width: 250px;
     }
 
     .meme-input {
-        width: 310px;
+        width: 250px;
     }
 }
