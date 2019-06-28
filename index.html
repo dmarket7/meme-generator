@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Frank+Ruhl+Libre|Fredoka+One|Josefin+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Meme Generator!</h1>
+    </header>
+    <div class="container">
+        <form action="#" method='post' id='image-form'>
+            <h2>Paste a link to an image below...</h2>
+            <div class='url-input'>
+                <input id='image-url' type="url" name='image-link' value=''>
+                <input type="submit">
+            </div>
+            <div id='top-caption-input' style='display: none;'>
+                <input type="text" name='image-link' value='WRITE A TOP CAPTION!' class='meme-input'>
+            </div>
+            <div id='image-box' class='image-layout'>
+                <h2 id='top-caption' style='display: none;' class='top-caption-layout'></h2>
+                <img id='main-image' src='' alt="random photo" style='display: none;' class='main-image-layout'>
+                <h2 id='bottom-caption' style='display: none;' class='bottom-caption-layout'></h2>
+            </div>
+            <div id='bottom-caption-input' style='display: none;'>
+                <input type="text" name='image-link' value='WRITE A BOTTOM CAPTION!' class='meme-input'>
+                <button id='display-text'>Display Text</button>
+                <button id='save-meme'>Save Meme</button>
+            </div>
+        </form>
+        <section class='results' id='results-area'>
+        </section>
+    </div>
+    <footer>
+
+    </footer>
+    <script src="functions.js"></script>
+</body>
+</html>
