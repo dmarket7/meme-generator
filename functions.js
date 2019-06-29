@@ -10,7 +10,7 @@ var displayTextBtn = document.getElementById('display-text');
 var resultsArea = document.getElementById('results-area');
 
 
-imageForm.addEventListener('submit', function(event){
+imageForm.addEventListener('submit', function(event){;
     event.preventDefault();
     if(imageUrl.value === '') return;
     mainImage.src = imageUrl.value;
@@ -19,6 +19,7 @@ imageForm.addEventListener('submit', function(event){
     bottomCaptionInput.style.display = "block";
     if(displayTextBtn.style.display === "block"){
         saveMemeBtn.style.display = "block";
+        captionFill();
     } else {
         saveMemeBtn.style.display = "none";
     }
@@ -33,6 +34,14 @@ displayTextBtn.addEventListener('click', function(event){
     bottomCaption.style.display = "block";
     saveMemeBtn.style.display = "block";
 });
+
+function captionFill(){
+    topCaption.innerText = topCaptionInput.childNodes[1].value;
+    bottomCaption.innerText = bottomCaptionInput.childNodes[1].value;
+    topCaption.style.display = "block";
+    bottomCaption.style.display = "block";
+    saveMemeBtn.style.display = "block";
+}
 
 var idCount = 1;
 
@@ -62,7 +71,7 @@ saveMemeBtn.addEventListener('click', function(event){
     innerDiv.appendChild(bottomHead);
     outerDiv.appendChild(innerDiv);
     outerDiv.appendChild(deleteBtn);
-    resultsArea.prepend(outerDiv);
+    resultsArea.insertBefore(outerDiv, resultsArea.firstChild);
     idCount++;
     resetInput();
 });
@@ -72,7 +81,9 @@ function resetInput(){
     mainImage.src = '';
     mainImage.style.display = "none";
     topCaptionInput.style.display = "none";
+    topCaptionInput.childNodes[1].value = '';
     bottomCaptionInput.style.display = "none";
+    bottomCaptionInput.childNodes[1].value = '';
     saveMemeBtn.style.display = "none";
     displayTextBtn.style.display = "none";
     topCaption.style.display = "none";
