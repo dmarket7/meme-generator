@@ -30,6 +30,10 @@ h2 {
     text-align: center;
 }
 
+button {
+    background-color: #FFAD35;
+}
+
 header h1 {
     grid-column: 2 / 3;
 }
@@ -80,10 +84,6 @@ form input {
 
 #image-url {
     width: 250px;
-}
-
-#lucky-button {
-    z-index: 1;
 }
 
 form img {
@@ -216,7 +216,4 @@ form button {
         width: 250px;
     }
 
-    #lucky-button {
-        z-index: 1;
-    }
 }
