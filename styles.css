@@ -88,6 +88,10 @@ form input {
     width: 250px;
 }
 
+#lucky-button {
+    z-index: 1;
+}
+
 form img {
     grid-column: 2 / 3;
     border: 2px solid #fff;
@@ -204,7 +208,7 @@ form button {
 
 /* Media Queries */
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
 
     .main-image-layout, .top-caption-layout, .bottom-caption-layout {
         width: 320px;
