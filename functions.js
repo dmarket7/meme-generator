@@ -8,6 +8,7 @@ var bottomCaption = document.getElementById('bottom-caption');
 var saveMemeBtn = document.getElementById('save-meme');
 var displayTextBtn = document.getElementById('display-text');
 var resultsArea = document.getElementById('results-area');
+var luckyBtn = document.getElementById('lucky-button');
 
 
 imageForm.addEventListener('submit', function(event){;
@@ -24,6 +25,12 @@ imageForm.addEventListener('submit', function(event){;
         saveMemeBtn.style.display = "none";
     }
     displayTextBtn.style.display = "block";
+});
+
+luckyBtn.addEventListener('click', function(event){
+    var randomIndex = Math.floor(Math.random() * luckyImages.length);
+    console.log(randomIndex)
+    imageUrl.value = luckyImages[randomIndex];
 });
 
 displayTextBtn.addEventListener('click', function(event){
@@ -98,3 +105,29 @@ function addDeleteEvent(btn){
         parentEl.remove();
     })
 }
+
+var luckyImages = [
+    'https://imgflip.com/s/meme/Roll-Safe-Think-About-It.jpg',
+    'https://junkee.com/wp-content/uploads/2019/04/Daenerys-Targaryen.jpg',
+    'https://media.npr.org/assets/img/2016/03/29/ap_090911089838_sq-3271237f28995f6530d9634ff27228cae88e3440-s800-c85.jpg',
+    'https://i.imgflip.com/2puag9.jpg',
+    'http://cdn.arn.com.au/media/7608613/chloe.jpg',
+    'https://imgflip.com/s/meme/One-Does-Not-Simply.jpg',
+    'https://imgflip.com/s/meme/Futurama-Fry.jpg',
+    'https://i.pinimg.com/236x/cd/99/95/cd9995d067176809b6a1d45fb952f775--kevin-hart-kevin-oleary.jpg',
+    'https://comicsandmemes.com/wp-content/uploads/blank-meme-template-012-dave-chapelle-got-any-more.png',
+    'https://i.imgur.com/iUtxmEN.jpg',
+    'http://bestmememaker.weebly.com/uploads/4/1/0/7/41076499/8585768_orig.jpg',
+    'https://i.imgflip.com/tglb9.jpg',
+    'https://sayingimages.com/wp-content/uploads/Mad-Baby-Blank-Meme.jpg',
+    'http://www.quickmeme.com/img/1e/1e322b11837872ed639ead2f4adf7df8084c1c697e4ae5c821797a2eb1126820.jpg',
+    'https://imgflip.com/s/meme/Creepy-Condescending-Wonka.jpg',
+    'https://media.giphy.com/media/ksEi1DprJUroG66Z99/giphy.gif',
+    'https://media.giphy.com/media/ckltH3WWaHuSUAgIZE/giphy.gif',
+    'https://media.giphy.com/media/4JXQB4WFjehB9p2UwV/giphy.gif',
+    'https://media.giphy.com/media/aUrv4ohm0IPNS/giphy.gif',
+    'https://media.giphy.com/media/6kTFyZAgluhoc/giphy.gif',
+    'https://media.giphy.com/media/WpxeQuE1hfvLow9Ir3/giphy.gif',
+    'https://media.giphy.com/media/A6aHBCFqlE0Rq/giphy.gif',
+    'https://media.giphy.com/media/duiWE5jXyelf77m3a5/giphy.gif'
+];
