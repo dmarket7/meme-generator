@@ -78,7 +78,7 @@ saveMemeBtn.addEventListener('click', function(event){
     innerDiv.appendChild(bottomHead);
     outerDiv.appendChild(innerDiv);
     outerDiv.appendChild(deleteBtn);
-    resultsArea.insertBefore(outerDiv, resultsArea.firstChild);
+    resultsArea.prepend(outerDiv);
     idCount++;
     resetInput();
 });
